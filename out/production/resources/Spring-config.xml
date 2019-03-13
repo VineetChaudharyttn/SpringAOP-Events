@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--Question1-->
+    <bean id="database1" class="question1.Database">
+        <property name="port" value="8080"/>
+        <property name="name" value="port name"/>
+    </bean>
+    <!--<bean class="question1.Listener"/>-->
+
+    <!--Question2-->
+    <bean id="database2" class="question2.Database">
+        <property name="port" value="8080"/>
+        <property name="name" value="port name"/>
+    </bean>
+    <!--<context:annotation-config/>
+    <bean class="question2.MultipleEventListener"/>-->
+
+    <!--question3-->
+    <bean id="database3" class="question3.Database">
+        <property name="port" value="8080"/>
+        <property name="name" value="port name"/>
+    </bean>
+    <bean class="question3.CustomEventListener"/>
+
+    <!--Question4-->
+    <aop:aspectj-autoproxy/>
+    <context:component-scan base-package="question4"/>
+
+    <!--Question5-->
+    <context:component-scan base-package="question5"/>
+
+    <!--Question6-->
+    <context:component-scan base-package="question6"/>
+
+    <!--Question7-->
+    <context:component-scan base-package="question7"/>
+    <bean id="demo" class="question7.Demo"/>
+
+
+    <!--Question8-->
+    <context:component-scan base-package="question8"/>
+
+    <!--Question9-->
+    <context:component-scan base-package="question9"/>
+
+
+
+</beans>
